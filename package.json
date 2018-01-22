@@ -1,0 +1,42 @@
+{
+  "name": "simple-node-server",
+  "version": "1.0.0",
+  "description": "A simple node server with express babel, webpack and mocha",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"nodemon server/server.js --exec babel-node\" \"webpack --config webpack.config.js --watch\"",
+    "build": "babel src -d dist",
+    "serve": "node dist/index.js",
+    "test": "mocha --require babel-core/register",
+    "webpack": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skywickenden/simple-node-server.git"
+  },
+  "keywords": [
+    "tutorials"
+  ],
+  "author": "Sky Wickenden",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/skywickenden/simple-node-server/issues"
+  },
+  "homepage": "https://github.com/skywickenden/simple-node-server#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "concurrently": "^3.5.1",
+    "mocha": "^4.1.0",
+    "nodemon": "^1.14.11",
+    "nodemon-webpack-plugin": "^0.1.6",
+    "should": "^13.2.1",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
