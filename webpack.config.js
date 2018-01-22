@@ -3,10 +3,12 @@ const path = require('path');
 const NodemonPlugin = require('nodemon-webpack-plugin');
 
 module.exports = {
-  entry: "./src/pages/main.js",
+  entry: {
+    main: "./src/pages/main.js",
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'webpack.bundle.js',
+    filename: '[name].bundle.js',
   },
   module: {
     // rules: [
